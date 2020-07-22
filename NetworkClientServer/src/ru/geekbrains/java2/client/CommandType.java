@@ -9,4 +9,8 @@ public enum CommandType {
     UPDATE_USERS_LIST,
     ERROR,
     END,
+    SEND_FILE,
+    RECEIVE_FILE,
+    GET_LIST
+
 }

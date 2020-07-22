@@ -13,6 +13,8 @@ import java.io.*;
 import java.net.Socket;
 import java.util.List;
 
+import static ru.geekbrains.java2.client.CommandType.*;
+
 public class NetworkService {
 
     private final String host;
@@ -70,12 +72,12 @@ public class NetworkService {
                             controller.showErrorMessage(commandData.getErrorMessage());
                             break;
                         }
-                        case UPDATE_USERS_LIST: {
-                            UpdateUsersListCommand commandData = (UpdateUsersListCommand) command.getData();
-                            List<String> users = commandData.getUsers();
-                            controller.updateUsersList(users);
-                            break;
-                        }
+                        //case UPDATE_USERS_LIST: {
+                            //UpdateUsersListCommand commandData = (UpdateUsersListCommand) command.getData();
+                            //List<String> users = commandData.getUsers();
+                            //controller.updateUsersList(users);
+                            //break;
+                        //}
                         default:
                             System.err.println("Unknown type of command: " + command.getType());
                     }

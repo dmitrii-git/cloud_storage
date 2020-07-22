@@ -6,7 +6,7 @@ import java.sql.*;
 
 
 
-public class SqlAuthService implements AuthService {
+public class SqlAuthService implements ru.geekbrains.java2.server.auth.AuthService {
 
     public static Connection conn;
     public static Statement statmt;

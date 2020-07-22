@@ -76,11 +76,11 @@ public class ClientChat extends JFrame {
         JOptionPane.showMessageDialog(this, "Failed to send message!");
     }
 
-    public void updateUsers(List<String> users) {
-        SwingUtilities.invokeLater(() -> {
-            DefaultListModel<String> model = new DefaultListModel<>();
-            model.addAll(users);
-            usersList.setModel(model);
-        });
-    }
+    //public void updateUsers(List<String> users) {
+    //    SwingUtilities.invokeLater(() -> {
+    //        DefaultListModel<String> model = new DefaultListModel<>();
+    //        model.addAll(users);
+    //        usersList.setModel(model);
+    //    });
+    //}
 }

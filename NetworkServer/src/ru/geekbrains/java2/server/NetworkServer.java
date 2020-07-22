@@ -2,17 +2,14 @@ package ru.geekbrains.java2.server;
 
 import ru.geekbrains.java2.client.Command;
 import ru.geekbrains.java2.server.auth.AuthService;
-import ru.geekbrains.java2.server.auth.BaseAuthService;
 import ru.geekbrains.java2.server.client.ClientHandler;
 import ru.geekbrains.java2.server.auth.SqlAuthService;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.stream.Collectors;
 
 public class NetworkServer {
 
@@ -24,7 +21,7 @@ public class NetworkServer {
 
     public NetworkServer(int port) {
         this.port = port;
-        this.authService = new SqlAuthService();
+        this.authService = (AuthService) new SqlAuthService();
     }
 
     public void start() {

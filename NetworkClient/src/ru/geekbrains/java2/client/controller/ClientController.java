@@ -30,7 +30,7 @@ public class ClientController {
     }
 
     private void runAuthProcess() {
-        networkService.setSuccessfulAuthEvent(new AuthEvent() {
+        networkService.setSuccessfulAuthEvent(new ru.geekbrains.java2.client.controller.AuthEvent() {
             @Override
             public void authIsSuccessful(String nickname) {
                 ClientController.this.setUserName(nickname);
@@ -44,7 +44,7 @@ public class ClientController {
 
     private void openChat() {
         authDialog.dispose();
-        networkService.setMessageHandler(new MessageHandler() {
+        networkService.setMessageHandler(new ru.geekbrains.java2.client.controller.MessageHandler() {
             @Override
             public void handle(String message) {
                 clientChat.appendMessage(message);
@@ -105,9 +105,9 @@ public class ClientController {
         System.err.println(errorMessage);
     }
 
-    public void updateUsersList(List<String> users) {
-        users.remove(nickname);
-        users.add(0, "All");
-        clientChat.updateUsers(users);
-    }
+    //public void updateUsersList(List<String> users) {
+    //    users.remove(nickname);
+    //    users.add(0, "All");
+    //    clientChat.updateUsers(users);
+    //}
 }
